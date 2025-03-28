@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Order Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f9f9f9;
+            box-sizing: border-box;
+        }
+        .cake-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            max-width: 800px;
+            margin: auto;
+        }
+        .cake-box {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background: #fff;
+            text-align: center;
+        }
+        .cake-box:hover {
+            transform: translateY(-5px);
+        }
+        .cake-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-overlay {
+            padding: 15px;
+        }
+        .text-overlay h3 {
+            margin: 10px 0;
+        }
+        .description {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .order-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: #ff6347;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .order-btn:hover {
+            background: #e5533d;
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 600px) {
+            .cake-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Your Favorite Cake</h1>
+
+    <div class="cake-container">
+
+        <!-- Reusable Cake Item -->
+        <script>
+            const cakes = [
+                { id: 1, name: 'Chocolate Cake', image: 'images/choco.jpg', description: 'Delicious, rich, and moist chocolate cake.' },
+                { id: 2, name: 'Vanilla Cake', image: 'images/vanilla.jpg', description: 'Light, fluffy vanilla cake with a creamy frosting.' }
+            ];
+
+            cakes.forEach(cake => {
+                document.write(`
+                    <div class="cake-box">
+                        <img src="${cake.image}" alt="${cake.name}" class="cake-img">
+                        <div class="text-overlay">
+                            <h3>${cake.name}</h3>
+                            <p class="description">${cake.description}</p>
+                            <a href="order-now.php?food_id=${cake.id}" class="order-btn">Order Now</a>
+                        </div>
+                    </div>
+                `);
+            });
+        </script>
+
+    </div>
+
+</body>
+</html>

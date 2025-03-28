@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="foods.html">Foods</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <section class="login-form text-center">
+        <div class="container">
+            <h2>Create Your Account</h2>
+            <form action="register.php" method="POST">
+                <div class="order-label">Full Name</div>
+                <input type="text" name="name" placeholder="Enter your full name" class="input-responsive" required>
+
+                <div class="order-label">Email</div>
+                <input type="email" name="email" placeholder="E.g. wowfood@example.com" class="input-responsive" required>
+
+                <div class="order-label">Password</div>
+                <input type="password" name="password" placeholder="Enter your password" class="input-responsive" required>
+
+                <div class="order-label">Confirm Password</div>
+                <input type="password" name="confirm_password" placeholder="Confirm your password" class="input-responsive" required>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

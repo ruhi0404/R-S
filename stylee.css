@@ -1,0 +1,662 @@
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-white{
+    color: white;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    color: #ff6b81;
+    text-decoration: none;
+}
+a:hover{
+    color: #ff4757;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: #ff4757;
+}
+h2{
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+h3{
+    font-size: 1.5rem;
+}
+.float-container{
+    position: relative;
+}
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+
+/* CSSS for navbar section */
+
+.logo{
+    width: 10%;
+    float: left;
+}
+.menu{
+    line-height: 60px;
+}
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+
+/* CSS for Food SEarch Section */
+
+.food-search{
+    /* General styling for food images */
+.box-3 img {
+    border-radius: 10px; /* Smoothly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Hover effect for images */
+.box-3 img:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect to make it pop */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Adding floating text effect */
+.float-text {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+    padding: 5px 10px;
+    border-radius: 5px; /* Smoothly rounded edges */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.float-text:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+}
+
+
+/* CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+
+.box-3{
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+
+/* CSS for Food Menu */
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/* for Order Section */
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+    .logo{
+        width: 80%;
+        float: none;
+        margin: 1% auto;
+    }
+
+    .menu ul{
+        text-align: center;
+    }
+
+    .food-search input[type="search"]{
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+
+    .btn{
+        width: 91%;
+        padding: 2%;
+    }
+
+    .food-search{
+        padding: 10% 0;
+    }
+
+    .categories{
+        padding: 20% 0;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .box-3{
+        width: 100%;
+        margin: 4% auto;
+    }
+
+    .food-menu{
+        padding: 20% 0;
+    }
+
+    .food-menu-box{
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    .social{
+        padding: 5% 0;
+    }
+    .order{
+        width: 100%;
+    }
+}
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #f7f7f7, #ececec);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;  /* Dark background for black theme */
+    color: #fff;             /* White text */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Title */
+h2.text-center {
+    font-size: 36px;
+    text-align: center;
+    color: #e74c3c; /* Red color */
+    margin: 20px 0;
+}
+
+/* Burger Box */
+.burger-box {
+    position: relative;
+    width: 30%;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.burger-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.burger-box:hover .burger-img {
+    transform: scale(1.1);  /* Zoom-in effect on hover */
+}
+
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.text-overlay h3 {
+    font-size: 24px;
+    color: #e74c3c;  /* Red color for title */
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #fff;  /* White text for description */
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    background-color: #e74c3c;  /* Red button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #c0392b;  /* Darker red on hover */
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .burger-box {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .burger-box {
+        width: 100%;
+    }
+}
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    background-color: #f3f4f6; /* Light grey background for a clean look */
+    color: #333; /* Neutral text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Momo Options Section */
+.momo-options {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.momo-options h2 {
+    font-size: 36px;
+    color: #d32f2f; /* Dark red color for Momo theme */
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Momo Box */
+.momo-box {
+    position: relative;
+    width: 30%;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.momo-box:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Momo Image */
+.momo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #d32f2f; /* Red border under the image */
+}
+
+/* Content Below Image */
+.momo-content {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.momo-content h3 {
+    font-size: 20px;
+    color: #b71c1c; /* Dark red for text */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.momo-content p {
+    font-size: 14px;
+    color: #555; /* Subtle gray for description */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Order Button */
+.order-btn {
+    background-color: #d32f2f; /* Dark red */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px; /* Rounded button */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .momo-box {
+        width: 45%; /* Two per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .momo-box {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* Cake Box */
+.cake-box {
+    position: relative;
+    width: 30%;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-box:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Cake Image */
+.cake-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content Overlay (placed below the image) */
+.cake-content {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-top: 2px solid #ffc0cb; /* Light pink border for separation */
+}
+
+.cake-content h3 {
+    font-size: 20px;
+    color: #e91e63; /* Bright pink color */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.cake-content p {
+    font-size: 14px;
+    color: #555; /* Dark gray for description */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Order Button */
+.order-btn {
+    background-color: #ff69b4; /* Hot pink */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e91e63; /* Bright pink on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cake-box {
+        width: 45%; /* Two per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .cake-box {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Pizza Options Section */
+.pizza-options {
+    background-color: #fff5e6; /* Soft peachy background for a pizza theme */
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 3px solid #ff5722; /* Red-orange border for separation */
+}
+
+/* Section Title */
+.pizza-options h2 {
+    font-size: 36px;
+    color: #e64a19; /* Deep orange for pizza theme */
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Pizza Box */
+.pizza-box {
+    position: relative;
+    width: 30%;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pizza-box:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Pizza Image */
+.pizza-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #ff5722; /* Orange border under the image */
+}
+
+/* Content Below Image */
+.pizza-content {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.pizza-content h3 {
+    font-size: 20px;
+    color: #d84315; /* Deep orange for text */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.pizza-content p {
+    font-size: 14px;
+    color: #555; /* Subtle gray for description */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Order Button */
+.order-btn {
+    background-color: #e64a19; /* Deep orange */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px; /* Rounded button */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #d84315; /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Responsive Design for Pizza Section */
+@media (max-width: 768px) {
+    .pizza-box {
+        width: 45%; /* Two per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .pizza-box {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+

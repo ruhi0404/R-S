@@ -1,0 +1,157 @@
+<!-- momo-options.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Momo Options</title>
+    <link rel="stylesheet" href="stylee.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Momo Options Section -->
+    <section class="momo-options">
+        <div class="container">
+            <h2 class="text-center">AVALIABLE MOMO</h2>
+
+            <!-- Momo 1 -->
+            <div class="momo-box">
+                <img src="images/steam momo.jpg" alt="Steam Momo" class="momo-img">
+                <div class="text-overlay">
+                    <h3>Steam Momo</h3>
+                    <p class="description">Soft and juicy steamed dumplings filled with meat and vegetables.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Momo 2 -->
+            <div class="momo-box">
+                <img src="images/fried.jpg" alt="Fried Momo" class="momo-img">
+                <div class="text-overlay">
+                    <h3>Fried Momo</h3>
+                    <p class="description">Crispy and golden dumplings filled with spiced meat and vegetables.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Momo 3 -->
+            <div class="momo-box">
+                <img src="images/veg.jpg" alt="Vegetable Momo" class="momo-img">
+                <div class="text-overlay">
+                    <h3>Vegetable Momo</h3>
+                    <p class="description">Healthy and tasty dumplings filled with fresh vegetables and spices.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Momo 4 -->
+            <div class="momo-box">
+                <img src="images/cheesemomo.jpg" alt="Chicken Momo" class="momo-img">
+                <div class="text-overlay">
+                    <h3>Chicken Momo</h3>
+                    <p class="description">Delicious dumplings stuffed with chicken and flavorful spices.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Momo 5 -->
+            <div class="momo-box">
+                <img src="images/cheesemomo.jpg" alt="Cheese Momo" class="momo-img">
+                <div class="text-overlay">
+                    <h3>Cheese Momo</h3>
+                    <p class="description">Mouthwatering dumplings filled with gooey cheese and herbs.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Momo 6 -->
+            <div class="momo-box">
+                <img src="images/pork.jpg" alt="Pork Momo" class="momo-img">
+                <div class="text-overlay">
+                    <h3>Pork Momo</h3>
+                    <p class="description">Savory dumplings filled with succulent pork and a mix of spices.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+<!-- Pizza Options Section -->
+<section class="pizza-options">
+    <div class="container">
+        <h2>Pizza Options</h2>
+
+        <!-- Pizza Item 1 -->
+        <div class="pizza-box">
+            <img src="images/pizza1.jpg" alt="Margherita Pizza" class="pizza-img">
+            <div class="pizza-content">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza topped with fresh tomatoes, basil, and mozzarella.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Pizza Item 2 -->
+        <div class="pizza-box">
+            <img src="images/pizza2.jpg" alt="Pepperoni Pizza" class="pizza-img">
+            <div class="pizza-content">
+                <h3>Pepperoni Pizza</h3>
+                <p>Crispy pepperoni with gooey mozzarella cheese on a thin crust.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Pizza Item 3 -->
+        <div class="pizza-box">
+            <img src="images/pizza3.jpg" alt="Veggie Pizza" class="pizza-img">
+            <div class="pizza-content">
+                <h3>Veggie Pizza</h3>
+                <p>Loaded with fresh veggies, olives, and a rich tomato sauce.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    // This JavaScript code will dynamically update the Order Now button URLs with the appropriate food_id
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const orderButtons = document.querySelectorAll('.order-btn'); // Select all Order Now buttons
+    
+        orderButtons.forEach(button => {
+            // Get the food_id from the button's parent container or a specific attribute if needed
+            const foodId = button.getAttribute('data-food-id');
+    
+            // Update the href of the button to include the food_id
+            button.addEventListener('click', function() {
+                window.location.href = `order-now.php?food_id=${foodId}`;
+            });
+        });
+    });
+    </script>
+    <a href="#" class="order-btn" data-food-id="1">Order Now</a>
+    <!-- Momo 1 -->
+<a href="#" class="order-btn" data-food-id="1">Order Now</a>
+
+<!-- Momo 2 -->
+<a href="#" class="order-btn" data-food-id="2">Order Now</a>
+
+<!-- Momo 3 -->
+<a href="#" class="order-btn" data-food-id="3">Order Now</a>
+
+<!-- Momo 4 -->
+<a href="#" class="order-btn" data-food-id="4">Order Now</a>
+
+<!-- Momo 5 -->
+<a href="#" class="order-btn" data-food-id="5">Order Now</a>
+
+<!-- Momo 6 -->
+<a href="#" class="order-btn" data-food-id="6">Order Now</a>
+
+
+    

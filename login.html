@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-white{
+    color: white;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    color: #ff6b81;
+    text-decoration: none;
+}
+a:hover{
+    color: #ff4757;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: #ff4757;
+}
+h2{
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+h3{
+    font-size: 1.5rem;
+}
+.float-container{
+    position: relative;
+}
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+
+/* CSSS for navbar section */
+
+.logo{
+    width: 10%;
+    float: left;
+}
+.menu{
+    line-height: 60px;
+}
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+
+/* CSS for Food SEarch Section */
+
+.food-search{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+
+    
+}
+
+.food-search input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+.food-menu-img img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.food-menu-img img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adds depth */
+}
+
+
+
+/* CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+
+.box-3{
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+
+/* CSS for Food Menu */
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/* for Order Section */
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+    .logo{
+        width: 80%;
+        float: none;
+        margin: 1% auto;
+    }
+
+    .menu ul{
+        text-align: center;
+    }
+
+    .food-search input[type="search"]{
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+
+    .btn{
+        width: 91%;
+        padding: 2%;
+    }
+
+    .food-search{
+        padding: 10% 0;
+    }
+
+    .categories{
+        padding: 20% 0;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .box-3{
+        width: 100%;
+        margin: 4% auto;
+    }
+
+    .food-menu{
+        padding: 20% 0;
+    }
+
+    .food-menu-box{
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    .social{
+        padding: 5% 0;
+    }
+    .order{
+        width: 100%;
+    }
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;  /* Dark background for black theme */
+    color: #fff;             /* White text */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Title */
+h2.text-center {
+    font-size: 36px;
+    text-align: center;
+    color: #e74c3c; /* Red color */
+    margin: 20px 0;
+}
+
+/* Burger Box */
+.burger-box {
+    position: relative;
+    width: 30%;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.burger-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.burger-box:hover .burger-img {
+    transform: scale(1.1);  /* Zoom-in effect on hover */
+}
+
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.text-overlay h3 {
+    font-size: 24px;
+    color: #e74c3c;  /* Red color for title */
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #fff;  /* White text for description */
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    background-color: #e74c3c;  /* Red button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #c0392b;  /* Darker red on hover */
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .burger-box {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .burger-box {
+        width: 100%;
+    }
+}
+/* Momo Section Fix */
+.momo-box {
+    width: 43%; /* Same as food-menu-box */
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.momo-img {
+    width: 20%; /* Same as food-menu-img */
+    float: left;
+}
+
+.momo-desc {
+    width: 70%; /* Same as food-menu-desc */
+    float: left;
+    margin-left: 8%;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .momo-box {
+        width: 90%; /* Matches the responsive behavior of food-menu-box */
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .momo-box {
+        width: 100%;
+    }
+}
+
+.momo-img img {
+    width: 100%; /* Ensure the image uses the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add hover effects */
+}
+
+.momo-img img:hover {
+    transform: scale(1.1); /* Zoom-in effect on hover, matching burger style */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add depth */
+}
+.order-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.order-btn:hover {
+    background-color: #d32f2f;
+}
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for each section */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header for Cake Options */
+.cake-options h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Styling for each cake box */
+.cake-box {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px 20px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cake-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for cake image */
+.cake-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.cake-box:hover .cake-img {
+    opacity: 0.7;
+}
+
+/* Overlay text and order button */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.text-overlay .description {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.order-btn {
+    padding: 12px 25px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .cake-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cake-box {
+        width: 100%;
+    }
+}
+/* Food Menu Section */
+.food-menu {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.food-menu h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Food Menu Box */
+.food-menu-box {
+    display: flex;
+    background: #fff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Space between items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-menu-box:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Food Image */
+.food-menu-img {
+    flex: 1;
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px; /* Rounded on left side */
+}
+
+.food-menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Food Details */
+.food-menu-desc {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.food-menu-desc h4 {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.food-menu-desc .food-price {
+    font-size: 1.2em;
+    color: #27ae60; /* Green for price */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.food-menu-desc .food-detail {
+    font-size: 1em;
+    color: #555; /* Light gray for description */
+    margin-bottom: 20px;
+    line-height: 1.5em; /* Better readability */
+}
+
+/* Order Now Button */
+.food-menu-desc .btn {
+    align-self: flex-start; /* Align button to the left */
+    padding: 10px 20px;
+    background: #ff6b6b; /* Bright red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.food-menu-desc .btn:hover {
+    background: #ff4757; /* Slightly darker red on hover */
+}
+
+/* Clearfix */
+.clearfix {
+    clear: both;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .food-menu-box {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center; /* Center align text */
+    }
+
+    .food-menu-img {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0; /* Rounded on top */
+    }
+
+    .food-menu-desc {
+        padding: 15px;
+    }
+
+    .food-menu-desc .btn {
+        align-self: center; /* Center button */
+    }
+}
+
+/* Order Form Section */
+.food-search {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.food-search h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.order {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+}
+
+.order fieldset {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.order legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.food-menu-img img {
+    width: 100px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.food-menu-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.input-responsive {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+}
+
+.input-responsive:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff4757;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .order {
+        padding: 20px;
+    }
+
+    .food-menu-img img {
+        width: 80px;
+    }
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Food Search Section */
+.food-search {
+    background-color: #34495e;
+    padding: 50px 0;
+}
+
+.food-search h2 {
+    font-size: 28px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form.order {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form.order fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+form.order legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Form Inputs and Labels */
+.order-label {
+    font-size: 14px;
+    color: #34495e;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-responsive {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+textarea.input-responsive {
+    resize: none;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2ecc71;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+}
+
+/* Food Menu Image */
+.food-menu-img {
+    float: left;
+    margin-right: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.food-menu-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.food-menu-desc {
+    overflow: hidden;
+}
+
+/* Price and Title */
+.food-menu-desc h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.food-price {
+    font-size: 16px;
+    color: #e74c3c;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html" target="_blank">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html" target="_blank">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html" target="_blank">Foods</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" target="_blank">Contact</a>
+                    </li>
+                    <li>
+                        <a href="login.html" target="_blank">Login</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Login Form Section Starts Here -->
+    <section class="login-form text-center">
+        <div class="container">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm" action="php/login.php" method="POST">
+                <div class="order-label">Email</div>
+                <input type="email" name="email" placeholder="E.g. wowfood@example.com" class="input-responsive" required>
+
+                <div class="order-label">Password</div>
+                <input type="password" name="password" placeholder="Enter your password" class="input-responsive" required>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </section>
+    <!-- Login Form Section Ends Here -->
+</body>
+</html>

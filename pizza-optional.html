@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Pizza Options</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: #ff6347;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            max-width: 120px;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            color: #ffe4b5;
+        }
+
+        /* Pizza Options Section */
+        .pizza-options {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .pizza-options h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff6347;
+        }
+
+        /* Pizza Grid Layout */
+        .pizza-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        /* Pizza Box */
+        .pizza-box {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 350px;
+        }
+
+        .pizza-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .pizza-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Pizza Content */
+        .pizza-content {
+            padding: 20px;
+        }
+
+        .pizza-content h3 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        .pizza-content p {
+            font-size: 1rem;
+            margin: 10px 0 20px;
+        }
+
+        /* Order Button */
+        .order-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #e5533d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+            }
+
+            .menu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo">
+                </a>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="foods.html">Foods</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pizza Options Section -->
+    <section class="pizza-options">
+        <div class="container">
+            <h2>More Pizza Options</h2>
+
+            <div class="pizza-grid">
+                <!-- Pizza Items -->
+                <div class="pizza-box" data-food-id="1">
+                    <img src="images/pizza3.jpg" alt="Margherita Pizza" class="pizza-img">
+                    <div class="pizza-content">
+                        <h3>Margherita Pizza</h3>
+                        <p>Classic pizza topped with fresh tomatoes, basil, and mozzarella.</p>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="pizza-box" data-food-id="2">
+                    <img src="images/th (2).jpg" alt="Pepperoni Pizza" class="pizza-img">
+                    <div class="pizza-content">
+                        <h3>Pepperoni Pizza</h3>
+                        <p>Crispy pepperoni with gooey mozzarella cheese on a thin crust.</p>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="pizza-box" data-food-id="3">
+                    <img src="images/th (4).jpg" alt="Veggie Pizza" class="pizza-img">
+                    <div class="pizza-content">
+                        <h3>Veggie Pizza</h3>
+                        <p>Loaded with fresh veggies, olives, and a rich tomato sauce.</p>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="pizza-box" data-food-id="4">
+                    <img src="images/th (3).jpg" alt="BBQ Chicken Pizza" class="pizza-img">
+                    <div class="pizza-content">
+                        <h3>BBQ Chicken Pizza</h3>
+                        <p>Grilled chicken, BBQ sauce, and mozzarella for a smoky, savory taste.</p>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all the "Order Now" buttons
+            document.querySelectorAll(".order-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const foodId = this.closest(".pizza-box").getAttribute("data-food-id");
+                    window.location.href = `process-order.php?food_id=${foodId}`;
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

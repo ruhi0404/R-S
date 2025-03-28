@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your common CSS file -->
+    <style>
+        /* Additional CSS for the Order Confirmed Page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirmation-container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .confirmation-container h1 {
+            color: #2ecc71;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-container p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .confirmation-container .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background: #2ecc71;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .confirmation-container .btn:hover {
+            background: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for your order. Your food is on its way!</p>
+        <a href="index.html" class="btn">Back to Menu</a>
+    </div>
+
+    <script>
+        // Optional JavaScript for page functionality
+        document.querySelector('.btn').addEventListener('click', function () {
+            alert("Redirecting to the menu...");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="food-search">
+        <div class="container">
+            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+            <form action="process-order.php" class="order" method="POST">
+                <fieldset>
+                    <legend>Selected Food</legend>
+                    <div class="food-menu-img">
+                        <img src="images/menu-pizza.jpg" alt="Chicken Hawaiian Pizza" class="img-responsive img-curve">
+                    </div>
+                    <div class="food-menu-desc">
+                        <h3>Food Title</h3>
+                        <p class="food-price">&#8377; 150</p>
+                        <div class="order-label">Quantity</div>
+                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Delivery Details</legend>
+                    <div class="order-label">Full Name</div>
+                    <input type="text" name="full-name" placeholder="Your Good Name" class="input-responsive" required>
+
+                    <div class="order-label">Phone Number</div>
+                    <input type="tel" name="contact" placeholder="E.g. 9843xxxxxx" class="input-responsive" required>
+
+                    <div class="order-label">Email</div>
+                    <input type="email" name="email" placeholder="E.g. wowfood@example.com" class="input-responsive" required>
+
+                    <div class="order-label">Address</div>
+                    <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Confirm Order</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript Code -->
+    <script>
+        document.querySelector('.order').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Get input values
+            const fullName = document.querySelector('input[name="full-name"]').value.trim();
+            const phoneNumber = document.querySelector('input[name="contact"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+            const address = document.querySelector('textarea[name="address"]').value.trim();
+
+            // Validation flags
+            let isValid = true;
+            let errorMessage = '';
+
+            // Name validation
+            if (fullName === '' || !/^[a-zA-Z\s]+$/.test(fullName)) {
+                isValid = false;
+                errorMessage += 'Please enter a valid name (letters and spaces only).\n';
+            }
+
+            // Phone number validation (10 digits)
+            if (phoneNumber === '' || !/^\d{10}$/.test(phoneNumber)) {
+                isValid = false;
+                errorMessage += 'Please enter a valid 10-digit phone number.\n';
+            }
+
+            // Email validation
+            if (email === '' || !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+                isValid = false;
+                errorMessage += 'Please enter a valid email address.\n';
+            }
+
+            // Address validation
+            if (address === '' || address.length < 10) {
+                isValid = false;
+                errorMessage += 'Please provide a detailed address (minimum 10 characters).\n';
+            }
+
+            // Show errors or proceed
+            if (!isValid) {
+                alert(errorMessage); // Display the error message
+            } else {
+                alert('Order placed successfully!');
+                this.submit(); // Submit the form if all fields are valid
+            }
+        });
+    </script>
+</body>
+</html>
